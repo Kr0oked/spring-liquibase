@@ -1,0 +1,3 @@
+spring:
+  liquibase:
+    change-log: db/changelog/changelog-master.xml
