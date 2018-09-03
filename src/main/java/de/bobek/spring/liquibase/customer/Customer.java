@@ -1,4 +1,4 @@
-package de.bobek.spring.liquibase.domain;
+package de.bobek.spring.liquibase.customer;
 
 import lombok.Data;
 
@@ -10,11 +10,11 @@ import static javax.persistence.GenerationType.AUTO;
 
 @Entity
 @Data
-public class MyTable {
+public class Customer {
 
     @Id
     @GeneratedValue(strategy = AUTO)
     private Long id;
 
-    private String myValue;
+    private String name;
 }
