@@ -31,7 +31,7 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-data-jpa'
     compile 'org.liquibase:liquibase-core'
     compile 'com.h2database:h2'
-    liquibaseRuntime 'org.liquibase:liquibase-core:3.6.2'
+    liquibaseRuntime 'org.liquibase:liquibase-core:3.6.3'
     liquibaseRuntime 'org.liquibase.ext:liquibase-hibernate5:3.6'
     liquibaseRuntime 'mysql:mysql-connector-java'
     liquibaseRuntime 'org.springframework.boot:spring-boot'
