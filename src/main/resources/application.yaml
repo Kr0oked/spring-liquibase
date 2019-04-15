@@ -1,3 +1,5 @@
 spring:
   liquibase:
     change-log: classpath:db/changelog/changelog-master.xml
+  jpa:
+    open-in-view: false

@@ -15,7 +15,7 @@ $ ./gradlew diff
 
 ##### Executed with Java 8
 ```
-20:11:05: Executing task 'diff'...
+21:08:14: Executing task 'diff'...
 
 > Task :wrapper
 
@@ -25,7 +25,7 @@ BUILD SUCCESSFUL in 0s
 
 > Task :diff
 liquibase-plugin: Running the 'main' activity...
-Starte Liquibase am Mo., 15 Apr. 2019 20:11:05 MESZ (Version 3.6.3, kompiliert am 2019-01-29 11:34:48)
+Starte Liquibase am Mo., 15 Apr. 2019 21:08:15 MESZ (Version 3.6.3, kompiliert am 2019-01-29 11:34:48)
 
 Ergebnisse des Vergleichs:
 Reference Database: null @ hibernate:spring:de.bobek?dialect=org.hibernate.dialect.MySQL5Dialect&hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy&hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy (Default Schema: HIBERNATE)
@@ -78,7 +78,7 @@ Unexpected View(s): NONE
 Changed View(s): NONE
 Liquibase: Der Befehl 'diff' wurde erfolgreich ausgeführt.
 
-BUILD SUCCESSFUL in 2s
+BUILD SUCCESSFUL in 1s
 2 actionable tasks: 2 executed
-20:11:07: Task execution finished 'diff'.
+21:08:16: Task execution finished 'diff'.
 ```
