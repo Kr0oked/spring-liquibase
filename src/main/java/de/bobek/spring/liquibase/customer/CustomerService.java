@@ -16,7 +16,7 @@ public class CustomerService {
 
     @PostConstruct
     public void printCustomersSize() {
-        long count = customerRepository.count();
+        var count = customerRepository.count();
         log.info("Customer table contains {} entries", count);
     }
 
