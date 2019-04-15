@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'org.springframework.boot:spring-boot-gradle-plugin:2.1.0.RELEASE'
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:2.1.4.RELEASE'
     }
 }
 
@@ -31,12 +31,13 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-data-jpa'
     compile 'org.liquibase:liquibase-core'
     compile 'com.h2database:h2'
-    liquibaseRuntime 'org.liquibase:liquibase-core:3.6.3'
+    liquibaseRuntime 'org.liquibase:liquibase-core'
     liquibaseRuntime 'org.liquibase.ext:liquibase-hibernate5:3.6'
     liquibaseRuntime 'mysql:mysql-connector-java'
     liquibaseRuntime 'org.springframework.boot:spring-boot'
     liquibaseRuntime 'org.springframework:spring-orm'
     liquibaseRuntime 'javax.xml.bind:jaxb-api'
+    liquibaseRuntime 'ch.qos.logback:logback-classic:1.2.3' // Fix for https://liquibase.jira.com/browse/CORE-3212
     liquibaseRuntime sourceSets.main.output
 }
 
@@ -52,9 +53,12 @@ liquibase {
             password 'myPassword'
             changeLogFile 'src/main/resources/db/changelog/changelog-master.xml'
             referenceUrl 'hibernate:spring:de.bobek' +
-                    '?dialect=org.hibernate.dialect.MySQL5Dialect' +
-                    '&hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy' +
-                    '&hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy'
+                    '?dialect=' +
+                    'org.hibernate.dialect.MySQL5Dialect' +
+                    '&hibernate.physical_naming_strategy=' +
+                    'org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy' +
+                    '&hibernate.implicit_naming_strategy=' +
+                    'org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy'
         }
     }
 }

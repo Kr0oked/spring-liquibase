@@ -6,12 +6,13 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
 
     <!-- expected
-    <changeSet id="1" author="Philipp Bobek">
+    <changeSet author="Philipp Bobek" id="1">
         <createTable tableName="customer">
-            <column name="id" type="BIGINT" autoIncrement="true">
+            <column autoIncrement="true" name="id" type="BIGINT">
                 <constraints primaryKey="true" primaryKeyName="customerPK"/>
             </column>
             <column name="name" type="VARCHAR(255)"/>
+            <column name="timestamp" type="datetime"/>
         </createTable>
     </changeSet>
     -->
