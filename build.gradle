@@ -17,10 +17,10 @@ repositories {
 }
 
 dependencies {
-    compile 'org.springframework.boot:spring-boot-starter-web'
-    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
-    compile 'org.liquibase:liquibase-core'
-    compile 'com.h2database:h2'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.liquibase:liquibase-core'
+    implementation 'com.h2database:h2'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     liquibaseRuntime 'org.liquibase:liquibase-core'
