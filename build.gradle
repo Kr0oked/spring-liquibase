@@ -1,20 +1,10 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'org.springframework.boot:spring-boot-gradle-plugin:2.1.4.RELEASE'
-    }
-}
-
 plugins {
+    id 'org.springframework.boot' version '2.4.2'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
     id 'idea'
-    id 'org.liquibase.gradle' version '2.0.1'
+    id 'org.liquibase.gradle' version '2.0.4'
 }
-
-apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'
 
 group 'de.bobek'
 version '1.0-SNAPSHOT'
