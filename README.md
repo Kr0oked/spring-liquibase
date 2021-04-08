@@ -3,17 +3,20 @@
 This demo shows a working example of a Liquibase Gradle DIFF with a SpringBoot application.
 
 ## Docker
+
 ```
 $ docker build -t springliquibase src/docker
 $ docker run -p 3306:3306 springliquibase
 ```
 
 ## Gradle
+
 ```
 $ ./gradlew diff
 ```
 
 ##### Executed with Java 11
+
 ```
 22:16:35: Executing task 'diff'...
 
@@ -39,10 +42,10 @@ Product Version:
      Target: '8.0.12'
 Missing Catalog(s): NONE
 Unexpected Catalog(s): NONE
-Changed Catalog(s): 
+Changed Catalog(s):
      HIBERNATE
           name changed from 'HIBERNATE' to 'my_database'
-Missing Column(s): 
+Missing Column(s):
      HIBERNATE.customer.id
      HIBERNATE.customer.name
      HIBERNATE.customer.timestamp
@@ -51,22 +54,22 @@ Changed Column(s): NONE
 Missing Foreign Key(s): NONE
 Unexpected Foreign Key(s): NONE
 Changed Foreign Key(s): NONE
-Missing Index(s): 
+Missing Index(s):
      IX_customerPK UNIQUE  ON HIBERNATE.customer(id)
 Unexpected Index(s): NONE
 Changed Index(s): NONE
-Missing Primary Key(s): 
+Missing Primary Key(s):
      customerPK on HIBERNATE.customer(id)
 Unexpected Primary Key(s): NONE
 Changed Primary Key(s): NONE
-Missing Sequence(s): 
+Missing Sequence(s):
      hibernate_sequence
 Unexpected Sequence(s): NONE
 Changed Sequence(s): NONE
 Missing Stored Procedure(s): NONE
 Unexpected Stored Procedure(s): NONE
 Changed Stored Procedure(s): NONE
-Missing Table(s): 
+Missing Table(s):
      customer
 Unexpected Table(s): NONE
 Changed Table(s): NONE
